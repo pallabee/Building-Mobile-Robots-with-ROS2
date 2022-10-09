@@ -16,12 +16,12 @@ def generate_launch_description():
             name='sim'
         ),
 	Node(
-            package='teleop_twist_keyboard',
-            executable='teleop_twist_keyboard',
+            package='turtlesim',
+            executable='turtle_teleop_key',
             prefix = 'xterm -e',
             name='teleop',
             remappings=[
-                ('/output/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),
+                ('/turtle1/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),
             ]
         ),
         Node(
